@@ -110,6 +110,15 @@ strong {
     color: #A0A0A0;
 }
 
+div.img {
+    padding: 8px 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
 /*────────*/
 
 .tac {
@@ -365,11 +374,6 @@ main {
     height: 100%;
     padding: 5vw 0;
     margin: 0 auto;
-}
-
-main img {
-    width: 100%;
-    height: auto;
 }
 
 @media screen and (max-width: 576px) {
