@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+    <title>页面不存在 | StarSky919's Website</title>
+</head>
+
+<body>
+    <nav></nav>
+    <header>
+        <h1>404</h1>
+        <p>您所访问的页面不存在:(</p>
+    </header>
+    <main>
+        <h3>每日一言</h3>
+        <p id="hitokoto"><span class="loading"></span></p>
+    </main>
+    <footer></footer>
+    <script src="assets/js/main.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        let xhr = new XMLHttpRequest();
+        xhr.open('get', 'https://v1.hitokoto.cn/?c=a&c=d&c=h&c=i&c=k');
+        xhr.onreadystatechange = function() {
+            if (xhr.status == 200 && xhr.readyState == 4) {
+                let data = JSON.parse(xhr.responseText);
+                $('#hitokoto').innerHTML = data.hitokoto;
+            }
+        }
+        xhr.send();
+    </script>
+</body>
+
+</html>

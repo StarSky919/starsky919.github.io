@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+    <style type="text/css">
+        header .profile {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 8px;
+        }
+
+        header .profile>* {
+            margin: 8px;
+        }
+
+        header .profile img {
+            width: 96px;
+            height: 96px;
+            border: 2px solid #FFFFFF;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+        }
+
+        header .profile span {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        header .welcome {
+            margin: 8px;
+        }
+
+        @media screen and (min-width: 768px) {
+            header .profile {
+                flex-direction: row;
+            }
+        }
+
+        .links a:not(:last-of-type) {
+            margin-right: 8px;
+        }
+    </style>
+    <title>首页 | StarSky919's Website</title>
+</head>
+
+<body>
+    <nav></nav>
+    <header>
+        <div class="profile">
+            <img src="assets/images/avatar.jpg" alt="avatar" />
+            <span>StarSky919</span>
+        </div>
+        <span class="welcome">欢迎来到我的个人网站ฅ^•ω•^ฅ</span>
+    </header>
+    <main>
+        <h3>动态</h3>
+        <p>我杀歌了！</p>
+        <img src="resources/images/Maboroshi_TP100.jpg" alt="Maboroshi_TP100" />
+        <div class="hr"></div>
+        <h3>友情链接</h3>
+        <div class="links">
+            <a href="https://tools.starsky919.xyz/">我的工具箱</a>
+            <a href="https://ohayo.cyoragex.xyz/">Cyorage的博客</a>
+            <a href="https://hitokoto.cn/">Hitokoto一言</a>
+        </div>
+    </main>
+    <footer></footer>
+    <script src="assets/js/main.js" type="text/javascript"></script>
+</body>
+
+</html>
