@@ -1,9 +1,9 @@
 @import "fonts/fontface.css";
 @import "fonts/font-awesome.css";
 
-@import "reset.css";
-@import "util.css";
-@import "keyframes.css";
+@import "ext/reset.css";
+@import "ext/util.css";
+@import "ext/keyframes.css";
 
 /*────────*/
 
