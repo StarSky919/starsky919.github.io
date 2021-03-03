@@ -11,7 +11,7 @@
 <body>
     <nav></nav>
     <header>
-        <h1>404</h1>
+        <h1 style="font-size: 48px;">404</h1>
         <p>您所访问的页面不存在:(</p>
     </header>
     <main>
@@ -21,15 +21,17 @@
     <footer></footer>
     <script src="assets/js/main.js" type="text/javascript"></script>
     <script type="text/javascript">
-        let xhr = new XMLHttpRequest();
-        xhr.open('get', 'https://v1.hitokoto.cn/?c=a&c=d&c=h&c=i&c=k');
-        xhr.onreadystatechange = function() {
-            if (xhr.status == 200 && xhr.readyState == 4) {
-                let data = JSON.parse(xhr.responseText);
-                $('#hitokoto').innerHTML = data.hitokoto;
-            }
+        function hitokoto() {
+            ajax('https://v1.hitokoto.cn/?c=a&c=d&c=h&c=i&c=k',
+                function(response) {
+                    let data = JSON.parse(response);
+                    $('#hitokoto').innerHTML = data.hitokoto;
+                });
         }
-        xhr.send();
+
+        $('#hitokoto').addEventListener('click', hitokoto);
+        
+        hitokoto();
     </script>
 </body>
 

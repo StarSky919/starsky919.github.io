@@ -53,7 +53,7 @@ span.loading {
     width: 25px;
     height: 25px;
     border: 3px solid #F0F0F0;
-    border-top: 3px solid #9898FF;
+    border-top: 3px solid #FEA29F;
     -webkit-border-radius: 50%;
     border-radius: 50%;
     -webkit-animation: rotate-360 1s linear infinite;

@@ -93,3 +93,11 @@
     font-display: swap;
     src: url(../../fonts/productsans/ProductSans-BlackItalic.ttf) format("truetype");
 }
+
+@font-face {
+    font-family: "JetBrainsMono";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(../../fonts/JetBrainsMono-Regular.ttf);
+}

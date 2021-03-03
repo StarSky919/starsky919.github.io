@@ -7,6 +7,43 @@
 
 /*────────*/
 
+@-webkit-keyframes onload {
+    from {
+        opacity: 0;
+        -webkit-transform: scale(0.85) translateY(50px);
+        transform: scale(0.85) translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes onload {
+    from {
+        opacity: 0;
+        -webkit-transform: scale(0.85) translateY(50px);
+        transform: scale(0.85) translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+main {
+    -webkit-animation: onload 0.5s ease-out;
+    animation: onload 0.5s ease-out;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+/*────────*/
+
 nav {
     position: fixed;
     width: 100vw;
@@ -23,7 +60,6 @@ nav .title {
     line-height: 50px;
     left: 0;
     margin-left: 2.5vw;
-    color: #000000;
     font-size: 18px;
     font-weight: bold;
 }
@@ -53,7 +89,7 @@ nav .items a {
 }
 
 nav .items a:hover {
-    color: #9898FF;
+    color: #FEA29F;
 }
 
 @media screen and (max-width: 768px) {
@@ -149,8 +185,17 @@ header {
     margin-top: 50px;
     padding: 72px 0;
     color: #FFFFFF;
-    background: #9898FF;
+    /*background: url(../images/background_1.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% auto;*/
     text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        background-size: auto 125%;
+    }
 }
 
 /*────────*/

@@ -14,10 +14,12 @@
 }
 
 *::selection {
-    background: rgba(192, 192, 192, 0.35);
+    background: rgba(254, 162, 159, 0.35);
 }
 
 :root {
+    line-height: 1.125;
+    color: #333333;
     font-size: 1rem;
 }
 
@@ -61,7 +63,7 @@ article p {
 
 a {
     display: inline;
-    color: #000000;
+    color: inherit;
     -webkit-transition: color 0.2s;
     transition: color 0.2s;
 }
@@ -74,7 +76,7 @@ a:active {
 }
 
 a:hover {
-    color: #9898FF;
+    color: #FEA29F;
 }
 
 i,
@@ -106,4 +108,8 @@ img {
     width: 100%;
     height: auto;
     margin: 8px 0;
+}
+
+code {
+    font-family: "JetBrainsMono", monospace;
 }

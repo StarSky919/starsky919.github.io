@@ -99,6 +99,17 @@ const toast = function(msg, sec) {
     }, sec * 1000);
 }
 
+const ajax = function(url, callback) {
+    let xhr = new XMLHttpRequest();
+    xhr.open('get', url);
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            callback(xhr.responseText);
+        }
+    }
+    xhr.send();
+}
+
 /*────────*/
 
 document.body.style.display = 'block';
@@ -162,7 +173,7 @@ if ($('nav')) {
         });
     });
 
-    let items = [['/', '网站首页'], ['blog/', '我的博客'], ['downloads/', '文件下载'], ['about/', '关于本站']];
+    let items = [['/', '首页'], ['blog/', '博客'], ['downloads/', '文件'], ['about/', '关于']];
     let url = location.href.split('/');
 
     for (let x in items) {
@@ -185,7 +196,24 @@ if ($('nav')) {
     window.addEventListener('beforeunload', closeMenu);
 }
 
-/*────────*/
+if ($('header')) {
+    var color = ['#FF9999', '#FFDDDD'];
+    let probability = Math.round(Math.random() * 100);
+    let deg = Math.round(Math.random() * 360);
+    let rotate_speed = Math.round(Math.random() * 50) + 25;
+
+    setInterval(function() {
+        $('header').style.background = `linear-gradient(${deg}deg, ${color[0]} 0%, ${color[1]} 100%),` +
+            `-webkit-linear-gradient(${deg}deg, ${color[0]} 0%, ${color[1]} 100%)`;
+        if (probability >= 50) {
+            if (deg >= 360) { deg = -360; }
+            deg++;
+        } else {
+            if (deg <= -360) { deg = 360; }
+            deg--;
+        }
+    }, rotate_speed);
+}
 
 if ($('footer')) {
     $('footer').innerHTML = '<span><i class="fa fa-copyright"></i> 2021 StarSky919</span>';
