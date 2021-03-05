@@ -216,7 +216,7 @@ if ($('header')) {
 }
 
 if ($('footer')) {
-    $('footer').innerHTML = '<span><i class="fa fa-copyright"></i> 2021 StarSky919</span>';
+    $('footer').innerHTML = '<div><i class="fa fa-copyright"></i> 2021 StarSky919</div>';
 }
 
 /*────────*/

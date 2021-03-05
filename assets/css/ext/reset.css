@@ -40,7 +40,7 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 8px 0;
+    margin: 0.65rem 0;
 }
 
 h1.ul,
@@ -54,7 +54,7 @@ h6.ul {
 }
 
 p {
-    margin: 8px 0;
+    margin: 0.65rem 0;
 }
 
 article p {
@@ -99,7 +99,7 @@ strong {
 
 hr {
     height: 2px;
-    margin: 8px 0;
+    margin: 0.65rem 0;
     background: #E0E0E0;
     border: none;
 }
@@ -107,7 +107,7 @@ hr {
 img {
     width: 100%;
     height: auto;
-    margin: 8px 0;
+    margin: 0.65rem 0;
 }
 
 code {
