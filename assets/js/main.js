@@ -193,7 +193,7 @@ if ($('nav')) {
         $('#menu-cb').checked = false;
     }
 
-    window.addEventListener('beforeunload', closeMenu);
+    //window.addEventListener('beforeunload', closeMenu);
 }
 
 if ($('header')) {
