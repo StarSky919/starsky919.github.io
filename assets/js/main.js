@@ -99,6 +99,10 @@ const toast = function(msg, sec) {
     }, sec * 1000);
 }
 
+const random = function(min, max) {
+    return Math.round(Math.random() * (max - min) + min);
+}
+
 const ajax = function(url, callback) {
     let xhr = new XMLHttpRequest();
     xhr.open('get', url);
@@ -110,16 +114,16 @@ const ajax = function(url, callback) {
     xhr.send();
 }
 
-/*────────*/
+/*--------*/
 
-document.body.style.display = 'block';
+document.body.classList.remove('hidden');
 
 var arrFunc = 'var func = () => {};';
 
 try {
     var es6Test = new Function(arrFunc);
 } catch (e) {
-    document.body.innerHTML = '您使用的浏览器版本过低，网页将无法加载';
+    document.body.innerHTML = '您使用的浏览器版本过低，网页无法加载';
 }
 
 if (!/AppleWebkit/i.test(navigator.userAgent)) {
@@ -159,7 +163,7 @@ if ($('body').hasClass('back-top')) {
     });
 };*/
 
-/*────────*/
+/*--------*/
 
 if ($('nav')) {
     $('nav').innerHTML = `<span class="title">${'StarSky919'/*$('title').innerHTML.split(' | ')[0]*/}</span>` +
@@ -189,6 +193,10 @@ if ($('nav')) {
         $('nav .items').innerHTML += `<a href="${a[x][0]}" style="--i: ${x};">${a[x][1]}</a>`;
     }
 
+    $('nav').addEventListener('touchmove', function(e) {
+        e.preventDefault();
+    });
+
     let closeMenu = () => {
         $('#menu-cb').checked = false;
     }
@@ -198,9 +206,9 @@ if ($('nav')) {
 
 if ($('header')) {
     var color = ['#FF9999', '#FFDDDD'];
-    let probability = Math.round(Math.random() * 100);
-    let deg = Math.round(Math.random() * 360);
-    let rotate_speed = Math.round(Math.random() * 50) + 25;
+    let probability = random(0, 100);
+    let deg = random(0, 360);
+    let rotate_speed = random(25, 75);
 
     setInterval(function() {
         $('header').style.background = `linear-gradient(${deg}deg, ${color[0]} 0%, ${color[1]} 100%),` +
@@ -219,4 +227,4 @@ if ($('footer')) {
     $('footer').innerHTML = '<div><i class="fa fa-copyright"></i> 2021 StarSky919</div>';
 }
 
-/*────────*/
+/*--------*/

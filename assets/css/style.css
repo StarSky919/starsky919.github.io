@@ -5,7 +5,7 @@
 @import "ext/util.css";
 @import "ext/keyframes.css";
 
-/*────────*/
+/*--------*/
 
 @-webkit-keyframes onload {
     from {
@@ -42,7 +42,7 @@ main {
     animation-fill-mode: forwards;
 }
 
-/*────────*/
+/*--------*/
 
 nav {
     position: fixed;
@@ -179,7 +179,7 @@ nav .items a:hover {
     }
 }
 
-/*────────*/
+/*--------*/
 
 header {
     margin-top: 50px;
@@ -198,7 +198,7 @@ header {
     }
 }
 
-/*────────*/
+/*--------*/
 
 main {
     display: flex;
@@ -248,7 +248,7 @@ main {
     }
 }
 
-/*────────*/
+/*--------*/
 
 footer {
     margin: 0 auto;

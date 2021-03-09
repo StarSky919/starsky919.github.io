@@ -29,9 +29,12 @@ body {
 }
 
 body {
-    display: none;
     -webkit-text-size-adjust: none;
     -webkit-tap-highlight-color: transparent;
+}
+
+body.hidden>*:not(noscript) {
+    display: none;
 }
 
 h1,
