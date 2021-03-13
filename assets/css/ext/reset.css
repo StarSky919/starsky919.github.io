@@ -14,12 +14,13 @@
 }
 
 *::selection {
-    background: rgba(254, 162, 159, 0.35);
+    color: #FFFFFF;
+    background: rgba(254, 162, 159, 1);
 }
 
 :root {
     line-height: 1.125;
-    color: #333333;
+    color: #252525;
     font-size: 1rem;
 }
 
@@ -89,7 +90,7 @@ b {
 }
 
 small {
-    font-size: 0.7em;
+    font-size: 0.85em;
 }
 
 strong {

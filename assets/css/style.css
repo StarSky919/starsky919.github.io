@@ -3,44 +3,6 @@
 
 @import "ext/reset.css";
 @import "ext/util.css";
-@import "ext/keyframes.css";
-
-/*--------*/
-
-@-webkit-keyframes onload {
-    from {
-        opacity: 0;
-        -webkit-transform: scale(0.85) translateY(50px);
-        transform: scale(0.85) translateY(50px);
-    }
-
-    to {
-        opacity: 1;
-        -webkit-transform: none;
-        transform: none;
-    }
-}
-
-@keyframes onload {
-    from {
-        opacity: 0;
-        -webkit-transform: scale(0.85) translateY(50px);
-        transform: scale(0.85) translateY(50px);
-    }
-
-    to {
-        opacity: 1;
-        -webkit-transform: none;
-        transform: none;
-    }
-}
-
-main {
-    -webkit-animation: onload 0.5s ease-out;
-    animation: onload 0.5s ease-out;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-}
 
 /*--------*/
 
@@ -113,7 +75,7 @@ nav .items a:hover {
         height: 2px;
         -webkit-border-radius: 4px;
         border-radius: 4px;
-        background: #000000;
+        background: #252525;
         -webkit-transition: all 0.25s ease;
         transition: all 0.25s ease;
     }
@@ -212,6 +174,17 @@ main {
     margin: 0 auto;
 }
 
+main>* {
+    opacity: 0;
+}
+
+.onload {
+    -webkit-animation: onload 0.5s ease var(--i);
+    animation: onload 0.5s ease var(--i);
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
 @media screen and (max-width: 576px) {
     main {
         max-width: 92%;
@@ -251,44 +224,8 @@ main {
 /*--------*/
 
 footer {
-    margin: 0 auto;
-    padding: 32px;
-    border-top: 2px solid #E0E0E0;
+    padding: 25px 0;
+    background: #F0F0F0;
     text-align: center;
-}
-
-@media screen and (max-width: 576px) {
-    footer {
-        max-width: 92%;
-    }
-}
-
-@media screen and (min-width: 576px) {
-    footer {
-        max-width: 540px;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    footer {
-        max-width: 720px;
-    }
-}
-
-@media screen and (min-width: 992px) {
-    footer {
-        max-width: 960px;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    footer {
-        max-width: 1140px;
-    }
-}
-
-@media screen and (min-width: 1400px) {
-    footer {
-        max-width: 1320px;
-    }
+    font-size: 0.85rem;
 }

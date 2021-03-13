@@ -201,7 +201,7 @@ if ($('nav')) {
         $('#menu-cb').checked = false;
     }
 
-    //window.addEventListener('beforeunload', closeMenu);
+    window.addEventListener('beforeunload', closeMenu);
 }
 
 if ($('header')) {
@@ -222,6 +222,21 @@ if ($('header')) {
         }
     }, rotate_speed);
 }
+
+if ($('main')) {
+    for (let [index, elm] of $a('main>*').entries()) {
+        elm.style.setProperty('--i', `${index * 25}ms`);
+        elm.addClass('onload');
+    }
+
+    if ($('.files') && $('.files').hasClass('onload')) {
+        for (let [index, elm] of $a('.file').entries()) {
+            elm.style.setProperty('--i', `${index * 25}ms`);
+            elm.addClass('onload');
+        }
+    }
+}
+
 
 if ($('footer')) {
     $('footer').innerHTML = '<div><i class="fa fa-copyright"></i> 2021 StarSky919</div>';

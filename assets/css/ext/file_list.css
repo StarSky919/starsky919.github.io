@@ -9,6 +9,7 @@
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
+    opacity: 0;
     width: 100%;
     line-height: 1.25rem;
     margin: 0.65rem 0;
