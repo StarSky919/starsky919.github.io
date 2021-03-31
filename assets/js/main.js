@@ -123,15 +123,15 @@ var arrFunc = 'var func = () => {};';
 try {
     var es6Test = new Function(arrFunc);
 } catch (e) {
-    document.body.innerHTML = '您使用的浏览器版本过低，网页无法加载';
+    document.body.innerHTML = '您使用的浏览器版本过低，网页无法加载。';
 }
 
 if (!/AppleWebkit/i.test(navigator.userAgent)) {
-    document.body.innerHTML = '请使用Chrome或Safari浏览器访问此页面';
+    document.body.innerHTML = '请使用Chrome或Safari浏览器访问此页面。';
 }
 
 if (/MicroMessenger|\sQQ/i.test(navigator.userAgent)) {
-    document.body.innerHTML = '请前往浏览器访问此页面';
+    document.body.innerHTML = '请前往浏览器访问此页面。';
 }
 
 window.addEventListener('load', function() {
