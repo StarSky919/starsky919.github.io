@@ -168,7 +168,7 @@ if ($('body').hasClass('back-top')) {
 if ($('nav')) {
     $('nav').innerHTML = `<span class="title">${'StarSky919'/*$('title').innerHTML.split(' | ')[0]*/}</span>` +
         `<input type="checkbox" id="menu-cb" />` +
-        `<label for="menu-cb" class="menu-btn"><span></span><span></span><span></span></label>` +
+        `<label for="menu-cb" class="menu-btn"><i class="fa fa-navicon"></i></label>` +
         `<div class='items'></div>`;
     $('nav .title').addEventListener('click', function() {
         window.scrollTo({
