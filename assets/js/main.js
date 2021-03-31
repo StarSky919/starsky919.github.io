@@ -135,7 +135,7 @@ if (/MicroMessenger|\sQQ/i.test(navigator.userAgent)) {
 }
 
 window.addEventListener('load', function() {
-    if (!$('header') && !$('main').hasClass('no-margin')) {
+    if (!$('header') && $('.main') && !$('main').hasClass('no-margin')) {
         $('main').style.marginTop = '50px';
     }
 });

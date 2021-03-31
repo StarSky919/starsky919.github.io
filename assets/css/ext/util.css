@@ -89,13 +89,13 @@ span.loading {
 /*--------*/
 
 @-webkit-keyframes onload {
-    from {
+    0% {
         opacity: 0;
         -webkit-transform: scale(0.85) translateY(50px);
         transform: scale(0.85) translateY(50px);
     }
 
-    to {
+    100% {
         opacity: 1;
         -webkit-transform: none;
         transform: none;
@@ -103,13 +103,13 @@ span.loading {
 }
 
 @keyframes onload {
-    from {
+    0% {
         opacity: 0;
         -webkit-transform: scale(0.85) translateY(50px);
         transform: scale(0.85) translateY(50px);
     }
-
-    to {
+    
+    100% {
         opacity: 1;
         -webkit-transform: none;
         transform: none;
